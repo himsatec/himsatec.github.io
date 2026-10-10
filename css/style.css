@@ -729,4 +729,63 @@ body {
     border-radius: 10px;
     margin-bottom: 18px;
 }
+```css
+/* HIMSAT responsive department layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.department-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.department-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.department-card h2 {
+    font-size: 1.35rem;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .department-card {
+        padding: 16px;
+    }
+
+    .department-image {
+        height: auto;
+        max-height: 260px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .department-card h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .department-image {
+        height: 220px;
+    }
+}
 ```
